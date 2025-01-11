@@ -6,6 +6,3 @@ def uppercase(str):
         else: lett
         print("{}".format(f"{lett}"), end="")
     print()
-
-uppercase("holberton")
-uppercase("holBERTon")
