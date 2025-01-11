@@ -10,5 +10,5 @@ if __name__ == "__main__":
     else:
         print("{} argument:".format(len(sys.argv) - 1))
 
-    for i in range(1, len(sys.arfv)):
+    for i in range(1, len(sys.argv)):
         print("{}".format(f"{i}: {sys.argv[i]}"))
