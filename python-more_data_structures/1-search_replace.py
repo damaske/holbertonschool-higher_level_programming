@@ -2,6 +2,6 @@
 def search_replace(my_list, search, replace):
     newone = my_list.copy()
     for i in range(len(newone)):
-            if newone[i] == search:
-                newone[i] = replace
+        if newone[i] == search:
+            newone[i] = replace
     return newone
