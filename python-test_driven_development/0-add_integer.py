@@ -6,6 +6,7 @@ by converting floats to integers before
 performing the addition
 """
 
+
 def add_integer(a, b=98):
     """
     Add two integers.
