@@ -4,7 +4,7 @@
 
 
 def text_indentation(text):
-     """
+    """
     Prints text with two new lines after each of the following: `. ? :`
 
     Args:
@@ -15,6 +15,7 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+
     length = len(text)
     i = 0
     while i < length:
