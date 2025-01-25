@@ -5,7 +5,8 @@ The function handles both integers and floats
 by converting floats to integers before
 performing the addition
 """
-  def add_integer(a, b=98):
+
+def add_integer(a, b=98):
     """
     Add two integers.
 
