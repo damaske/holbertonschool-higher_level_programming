@@ -23,7 +23,7 @@ def matrix_divided(matrix, div):
         or if rows are not all the same length.
         ZeroDivisionError: If `div` is zero.
     """
-    
+
     new_matrix = []
     error = ("div must be a number",
              "division by zero",
