@@ -29,10 +29,10 @@ class Square:
             print("")
             return
 
-        print("\n" * self.position[1], end="")
+        print("\n" * __self.position[1], end="")
         
         for _ in range(self.size):
-            print(" " * self.position[0] + "#" * self.size)
+            print(" " * __self.position[0] + "#" * __self.size)
 
     @property
     def position(self):
