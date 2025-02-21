@@ -25,13 +25,13 @@ class Square:
         return self.__size**2
 
     def my_print(self):
-        if self.size == 0:
+        if self.__size == 0:
             print("")
             return
 
         print("\n" * __self.position[1], end="")
         
-        for _ in range(self.size):
+        for _ in range(__self.size):
             print(" " * __self.position[0] + "#" * __self.size)
 
     @property
