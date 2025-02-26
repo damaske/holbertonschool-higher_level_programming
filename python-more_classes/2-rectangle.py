@@ -34,10 +34,10 @@ class Rectangle:
         self.__height = value
 
         def area(self):
-            return seldf.__height * __weight
+            return self.__height * self.__width
 
         def perimeter(self):
             if height == 0 or weight == 0:
                 self.perimeter == 0
             else:
-                return seldf.(__height +__weight) * 2
+                return seldf.__height + self__width * 2
