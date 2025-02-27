@@ -48,7 +48,7 @@ class Rectangle:
         result = ""
         for height in range(self.height):
             for width in range(self.width):
-                result += "#" * self.width
+                result += "#" * self.width + "\n"
                 if height < self.height - 1:
                     result += "\n"
         return result
