@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains the lookup function, 
+"""This module contains the lookup function,
 which returns a list of available attributes and methods of an object."""
 
 
