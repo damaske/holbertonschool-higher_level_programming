@@ -4,10 +4,9 @@
 
 
 def is_same_class(obj, a_class):
-    "Returns:
-        bool:
-            True if obj is an instance of a_class.
-            False if obj is not an instance of a_class or
-            if a_class is the object class."
+    "Returns - bool:
+    True if obj is an instance of a_class.
+    False if obj is not an instance of a_class o
+    if a_class is the object class."
 
     return isinstance(obj, a_class)
