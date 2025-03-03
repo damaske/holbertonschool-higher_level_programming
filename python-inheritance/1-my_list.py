@@ -8,4 +8,5 @@ class MyList(list):
     This method does not modify the original list; it only prints a sorted copy."""
 
     def print_sorted(self):
-        return sorted(self)
+        print(sorted(self))
+        return sorted(self
