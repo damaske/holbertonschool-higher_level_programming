@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """method area"""
+    """nstantiation with width and height"""
 
     def __init__(self, width, height):
         self.__width = width
