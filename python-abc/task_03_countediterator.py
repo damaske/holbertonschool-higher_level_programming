@@ -1,7 +1,7 @@
 #!/user/bin/python3
 
 class CountedIterator:
-    def __init__(self, iterable, count):
+    def __init__(self, iterable):
         self.iterator = iter(iterable)
         self.count = 0
 
@@ -9,4 +9,6 @@ class CountedIterator:
         return self.count
 
     def __next__(self):
-        pass
+        item = next(self.iterator)
+        self.count += 1
+        return item
