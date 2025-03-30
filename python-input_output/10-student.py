@@ -16,4 +16,4 @@ class Student:
         for key in attrs:
             if key in self.__dict__:
                 My_d[key] = self.__dict__[key]
-                return My_d
+        return My_d
