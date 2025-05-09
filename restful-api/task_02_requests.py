@@ -13,7 +13,7 @@ def fetch_and_print_posts():
 def fetch_and_save_posts():
     r = reguests.get('https://jsonplaceholder.typicode.com/todos/1')
 
-    if response.status_code == 200:
+    if r.status_code == 200:
         posts = r.json()
  
         posts_data = [{"id": post["id"], "title": post['title'], "body": post['body']} for post in posts]
