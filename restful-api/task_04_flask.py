@@ -2,6 +2,8 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+users = {}
+
 @app.route("/")
 def home():
         return "Welcome to the Flask API!"
