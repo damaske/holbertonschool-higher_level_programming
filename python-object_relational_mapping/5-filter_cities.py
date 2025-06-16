@@ -1,28 +1,29 @@
 #!/usr/bin/python3
-"""List cities of a given state"""
+"""Module"""
 
 if __name__ == '__main__':
-    import MySQLdb
     from sys import argv
+    import MySQLdb
 
-    conn = MySQLdb.connect(
-        host="localhost",
-        port=3306,
+    db = MySQLdb.connect(
         user=argv[1],
-        passwd=argv[2],
-        db=argv[3]
+        password=argv[2],
+        database=argv[3]
     )
-    cur = conn.cursor()
+    cursor = db.cursor()
 
-    cur.execute(
-        "SELECT cities.name FROM cities "
-        "JOIN states ON cities.state_id = states.id "
-        "WHERE states.name = %s "
-        "ORDER BY cities.id", (argv[4],)
-    )
+    cursor.execute('SELECT c.name, s.name \
+                    FROM cities AS c \
+                    INNER JOIN states AS s ON s.id = c.state_id ')
 
-    rows = cur.fetchall()
-    print(", ".join([row[0] for row in rows]))
+    cities = []
+    for city in cursor.fetchall():
+        if city[1] == argv[4]:
+            cities.append(city[0])
 
-    cur.close()
-    conn.close()
+    print(", ".join(cities))
+
+    if cursor:
+        cursor.close()
+    if db:
+        db.close()
