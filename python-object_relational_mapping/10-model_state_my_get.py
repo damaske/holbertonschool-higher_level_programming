@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
 """
-Module
+script that prints the State object with the
+name passed as argument from the database hbtn_0e_6_usa
 """
-=======
-""" script that lists all State objects that contain the
-letter a from the database hbtn_0e_6_usa"""
->>>>>>> d227b6616b8342354e97bf332da1babcf47fd562
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sys import argv
@@ -23,14 +19,14 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in (session.query(State)
-                  .filter(State.name.like('%a%'))
-                  .order_by(State.id)):
-        print("{}: {}".format(state.id, state.name))
+    state = (session.query(State)
+             .filter(State.name == argv[4])
+             .first())
+
+    if state is None:
+        print("Not found")
+    else:
+        print(state.id)
 
     if session:
-<<<<<<< HEAD
         session.close()
-=======
-        session.close()
->>>>>>> d227b6616b8342354e97bf332da1babcf47fd562
