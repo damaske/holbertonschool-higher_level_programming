@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 import os
 
-def generate_invitations(tamplate, attendees):
+def generate_invitations(template, attendees):
     if not template:
         print('Error: Tamplate is empty, no output files generated.')
         return
     if not attendees:
-        print('Error: Template is empty, no output files generated.')
+        print('Error: Attendees list is empty, no output files generated.')
         return
     if not isinstance(template, str):
         print('Error: Invalid input')
@@ -16,6 +16,7 @@ def generate_invitations(tamplate, attendees):
         print('Error Invalid input')
         return
     for index, attendee in enumerate(attendees, start=1):
+        template_schema = template
         for key in ['name', 'event_title', 'event_date', 'event_location']:
             placeholder = '{' + f'{key}' + '}'
             value = attendee.get(key) or "N/A"
